@@ -1,5 +1,7 @@
 <?php 
 
+
+// Creating a function to set comments into the database
 function setcomments($conn){
 	if (isset($_POST['commentSubmit'])) {
 		$uid = $_POST['uid'];
@@ -10,6 +12,8 @@ function setcomments($conn){
 	}
 }	
 
+
+// To get or retrieve sent data and paste on the webpage 
 function getcomments($conn){
 	$sql = "SELECT * FROM commentsection";
 	$result = $conn->query($sql);
@@ -33,6 +37,8 @@ function getcomments($conn){
 	
 }
 
+
+//Function edit or change the saved or set data in the database
 function editcomments($conn){
 	if (isset($_POST['commentSubmit'])) {
 		$id = $_POST['id'];
@@ -45,6 +51,8 @@ function editcomments($conn){
 	}
 }
 
+
+//To delete the comment from the database and the webpage.
 function deleteComments($conn){
 	if (isset($_POST['commentDelete'])) {
 		$id = $_POST['id'];
