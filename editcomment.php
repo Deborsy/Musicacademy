@@ -16,7 +16,7 @@ require 'header.php';
 	</style>
 </head>
 <body>
-
+<!-------------------------------- A page to edit the comment ------------------------------------->
 <?php
 $id = $_POST['id'];
 $uid = $_POST['uid'];
